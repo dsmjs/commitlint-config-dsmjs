@@ -1,0 +1,31 @@
+{
+  "name": "commitlint-config-dsmjs",
+  "description": "shareable config for commitlint",
+  "license": "MIT",
+  "author": "dsmJS",
+  "repository": "dsmjs/commitlint-config-dsmjs",
+  "bugs": "https://github.com/dsmjs/commitlint-config-dsmjs/issues",
+  "homepage": "https://github.com/dsmjs/commitlint-config-dsmjs#readme",
+  "main": "index.js",
+  "scripts": {
+    "lint:md": "globstar --node -- markdownlint **/*.md",
+    "test": "run-s lint:*",
+    "commitmsg": "commitlint -e",
+    "precommit": "npm test"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "2.1.0",
+    "globstar": "1.0.0",
+    "husky": "0.14.3",
+    "markdownlint-cli": "0.5.0",
+    "npm-run-all": "4.1.2"
+  },
+  "dependencies": {
+    "commitlint-config-travi": "1.2.17"
+  }
+}
