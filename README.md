@@ -17,13 +17,13 @@ This config extends [commitlint-config-travi](https://github.com/travi/commitlin
 ### Installation
 
 ```sh
-$ npm install commitlint-config-travi -D
+$ npm install commitlint-config-dsmjs -D
 ```
 
 ### Define the config for your project
 
 ```sh
-$ echo "module.exports = {extends: ['travi']};" > .commitlintrc.js
+$ echo "module.exports = {extends: ['dsmjs']};" > .commitlintrc.js
 ```
 
 ### Define the npm script for [husky](https://github.com/typicode/husky)
