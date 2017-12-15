@@ -9,3 +9,29 @@ shareable config for commitlint
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Greenkeeper badge](https://badges.greenkeeper.io/dsmjs/commitlint-config-dsmjs.svg)](https://greenkeeper.io/)
+
+This config extends [commitlint-config-travi](https://github.com/travi/commitlint-config-travi)
+
+## Usage
+
+### Installation
+
+```sh
+$ npm install commitlint-config-travi -D
+```
+
+### Define the config for your project
+
+```sh
+$ echo "module.exports = {extends: ['travi']};" > .commitlintrc.js
+```
+
+### Define the npm script for [husky](https://github.com/typicode/husky)
+
+```json
+{
+  "scripts": {
+    "commitmsg": "commitlint -e"
+  }
+}
+```
