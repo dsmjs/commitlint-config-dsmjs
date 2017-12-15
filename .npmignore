@@ -1,0 +1,11 @@
+test/
+
+.commitlintrc.js
+.editorconfig
+.eslintignore
+.gitattributes
+.gitignore
+.markdownlintrc
+.npmrc
+.nvmrc
+.travis.yml
