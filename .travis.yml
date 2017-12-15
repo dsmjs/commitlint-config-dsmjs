@@ -1,0 +1,12 @@
+language: node_js
+notifications:
+  email: false
+branches:
+  except:
+  - "/^v\\d+\\.\\d+\\.\\d+$/"
+after_install: npm ls >/dev/null
+before_script: npm run greenkeeper:update-lockfile
+before_deploy:
+- git config --global user.email "$GIT_EMAIL"
+- git config --global user.name "dsmJS Bot"
+after_script: npm run greenkeeper:upload-lockfile
