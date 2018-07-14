@@ -6,11 +6,14 @@ branches:
   - "/^v\\d+\\.\\d+\\.\\d+$/"
 after_install: npm ls >/dev/null
 before_script: npm run greenkeeper:update-lockfile
+after_script: npm run greenkeeper:upload-lockfile
 before_deploy:
 - git config --global user.email "$GIT_EMAIL"
 - git config --global user.name "dsmJS Bot"
-after_success: npm run semantic-release
-after_script: npm run greenkeeper:upload-lockfile
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: npx semantic-release
 env:
   global:
   - secure: Ol3EIBFbxgIAXNQ0puF5JyWPWqpAoL6AUaxABzJ1sGA5bqYZRMus+NL2uQXUp4orIqGYqcUVO8yYL8G6sUb+p99usNxmIaekzmOk3kaokdBfyZW4Md28+cUvGk8Xa7/OmMLLo9hPPPYz4hvNbuulImKP52I8lkiu9VUHYzmW8QQuEMHh6QV1ZhR5+hReXYxjydhmwUzxKRWqNBDxfT4zr0bJ03RmcE/j5fS6UockPKMuM8LyxqAL6MwaWniZY6ruHwMOnXGWyZkSWgW5Z9APSd0sm4Qdcuzs4rb6vN5SFfTEQAgEdzAzMFdMrjMWuzi/H63bXnY2/hZo+ikuZth48ycoTwtJ1RT0oMqUukpRutgcAjQSJFK67DNhWKHIDa7nnLUX5CPPhV8xyv1GUKWpYMJFbby35Smw95jeD/+mRyYl1NKNs4n598YxxtVZlRysZ9/z5uBeCTXpjE21KxlgBtu/ps4TXDO0i/WED0PxrOVJl+pDfdv0+cWPSCeJp/dZkEBWOmtDYaA1rC1FVKEpwIxjYEbio8AGPTvfXo79AxZLXF26hlXpxCBb3p8+hOeUdqBsiWPD1Orztj86zTMOl75HylKcvmwG9kysFMW8U2n/PLVmNnWfeFEpuxFw6XeFSt+tZDO66Fsn3q+/YGcXpFooGZX8jGlfCJ5izCvIvMc=
