@@ -11,9 +11,7 @@
     "lint:md": "globstar --node -- markdownlint **/*.md",
     "test": "run-s lint:*",
     "commitmsg": "commitlint -e",
-    "precommit": "npm test",
-    "greenkeeper:update-lockfile": "greenkeeper-lockfile-update",
-    "greenkeeper:upload-lockfile": "greenkeeper-lockfile-upload"
+    "precommit": "npm test"
   },
   "config": {
     "commitizen": {
@@ -23,7 +21,6 @@
   "devDependencies": {
     "cz-conventional-changelog": "3.0.2",
     "globstar": "1.0.0",
-    "greenkeeper-lockfile": "1.15.1",
     "husky": "4.0.6",
     "markdownlint-cli": "0.20.0",
     "npm-run-all": "4.1.5"
