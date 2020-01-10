@@ -1,9 +1,9 @@
-language: node_js
+version: ~> 1.0
 notifications:
   email: false
-branches:
-  except:
-  - "/^v\\d+\\.\\d+\\.\\d+$/"
+import:
+  - source: form8ion/.travis-ci:node.yml
+  - source: dsmjs/.travis-ci:authenticated-semantic-release.yml
 install: case $TRAVIS_BRANCH in greenkeeper*) npm i;; *) npm ci;; esac;
 after_install: npm ls >/dev/null
 before_script: npm run greenkeeper:update-lockfile
@@ -11,11 +11,3 @@ after_script: npm run greenkeeper:upload-lockfile
 before_deploy:
 - git config --global user.email "$GIT_EMAIL"
 - git config --global user.name "dsmJS Bot"
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: npx semantic-release
-env:
-  global:
-  - FORCE_COLOR=1
-  - NPM_CONFIG_COLOR=always
