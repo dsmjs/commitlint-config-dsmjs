@@ -4,7 +4,7 @@ shareable config for commitlint
 
 <!--status-badges start -->
 
-[![Build Status](https://img.shields.io/travis/com/dsmjs/commitlint-config-dsmjs.svg?style=flat&branch=master)](https://travis-ci.com/dsmjs/commitlint-config-dsmjs)
+[![Node CI Workflow Status][github-actions-ci-badge]][github-actions-ci-link]
 
 <!--status-badges end -->
 
@@ -52,3 +52,7 @@ $ echo "module.exports = {extends: ['dsmjs']};" > .commitlintrc.js
 [dependabot-link]: https://dependabot.com/
 
 [dependabot-badge]: https://badgen.net/dependabot/dsmjs/commitlint-config-dsmjs/?icon=dependabot
+
+[github-actions-ci-link]: https://github.com/dsmjs/commitlint-config-dsmjs/actions?query=workflow%3A%22Node.js+CI%22+branch%3Amaster
+
+[github-actions-ci-badge]: https://github.com/dsmjs/commitlint-config-dsmjs/workflows/Node.js%20CI/badge.svg
