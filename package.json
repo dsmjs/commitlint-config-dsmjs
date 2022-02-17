@@ -8,7 +8,7 @@
   "homepage": "https://github.com/dsmjs/commitlint-config-dsmjs#readme",
   "main": "index.js",
   "scripts": {
-    "lint:md": "globstar --node -- markdownlint **/*.md",
+    "lint:md": "remark --frail --quiet .",
     "test": "run-s lint:*",
     "prepare": "husky install"
   },
@@ -18,11 +18,12 @@
     }
   },
   "devDependencies": {
+    "@dsmjs/remark-preset-lint": "2.0.10",
     "cz-conventional-changelog": "3.3.0",
     "globstar": "1.0.0",
     "husky": "7.0.4",
-    "markdownlint-cli": "0.31.1",
-    "npm-run-all": "4.1.5"
+    "npm-run-all": "4.1.5",
+    "remark-cli": "10.0.1"
   },
   "dependencies": {
     "@form8ion/commitlint-config": "1.0.29"
