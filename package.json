@@ -26,6 +26,6 @@
     "remark-cli": "11.0.0"
   },
   "dependencies": {
-    "@form8ion/commitlint-config": "1.0.39"
+    "@form8ion/commitlint-config": "1.0.40"
   }
 }
